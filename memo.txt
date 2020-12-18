@@ -1,0 +1,121 @@
+import json112.171.130.221
+import requests
+
+url = "https://kapi.kakao.com/v2/api/talk/memo/default/send"
+
+# 사용자 토큰
+headers = {
+    "Authorization": "Bearer " + <access token>
+}
+
+
+data = {
+    "template_object" : json.dumps({ "object_type" : "text",
+                                     "text" : "Hello, world!",
+                                     "link" : {
+                                                 "web_url" : "www.naver.com"
+                                              }
+    })
+}
+
+response = requests.post(url, headers=headers, data=data)
+print(response.status_code)
+if response.json().get('result_code') == 0:
+    print('메시지를 성공적으로 보냈습니다.')
+else:
+    print('메시지를 성공적으로 보내지 못했습니다. 오류메시지 : ' + str(response.json()))
+
+
+__Name__ : 
+
+
+
+
+진단/변증
+
+
+
+처방
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+카카오 openAPI
+[카카오 OpenAPI 사용하기 (준비 사항 : 인증키 발급)](https://ai-creator.tistory.com/20)
+[카카오 OpenAPI 활용 - 나에게 카톡 메시지 보내기](https://ai-creator.tistory.com/23)
+[카카오톡 : 메시지 (1/3 - 나에게 메시지 보내기)](https://cocoabba.tistory.com/15)
+[카카오톡 친구목록 api 사용 중 "there are no assigned team members in your app" 오류 해결 방법](https://kwonsaw.tistory.com/356)
+[카오톡 : 메시지 (2/3 - 친구 목록 가져오기)](https://cocoabba.tistory.com/16?category=439259)
+kakao developers
+https://developers.kakao.com
+
+g2b_alarm
+네이티브 앱 키	8df587b31a79ea06ffb608da4bef6989
+REST API 키	5901d17878edcecb95c2b269f289238c
+JavaScript 키	1f7f7e77fffe19977819a7ab3b3b7073
+Admin 키	5080247ea148585234e6603738ac27d8
+
+nalja26@daum.net
+
+사용자 정보 저장하기
+친구에게 메시지 보내기	/v1/api/talk/friends/message/default/send	POST
+# 용어집 glossary
+
+거래소 exchange
+시장 market
+
+
+data
+storage / reservoir / garner / stock
+
+collector
+
+analyst
+
+messenger
+
+broker / trader
+
+merchant, trader, dealer, tradespeople, common people, trafficker
+
+manager
+
+발표자 presenter
+
+
+# 매뉴얼(mannual)
+
+	
+guideline, indicator, precept
+# messenger
+
+receptor(메시지 수용) -> modifier(내용, 형식 결정) -> sender(전송기)
+
+## slack
+mcctb
+
+https://github.com/hopelife/mcctb/tree/master/autotrading
+
+## notion
+
+
+## gmail
+
+
+get
+set
+
+attach
+
+
